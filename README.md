@@ -34,8 +34,8 @@
 <br>
 
 <p align="center">
-    <kbd><img src="iris_flowers.jpg" alt="Iris Flowers" width="300" height="200" title ="Iris Flowers" border ="2"></kbd>
-    <kbd><img src="flower_heading.png" alt="Iris Flower" width="300" height="200" title ="Iris Flower Measurement" border ="2"></kbd>
+    <kbd><img src="iris_flowers.jpg" alt="Iris Flowers" width="300" height="200" title ="Iris Flowers"></kbd>
+    <kbd><img src="iris_flower.png" alt="Iris Flower" width="300" height="200" title ="Iris Flower Measurement"></kbd>
 </p>
 
 <br>
