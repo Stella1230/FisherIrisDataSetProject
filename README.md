@@ -64,11 +64,10 @@ Before starting this project I research some of the best libraries that are avai
 
 #### Reading and Printing the CSV File
 
-Once I downloaded the datset and store it in a file called iris_data_set.csv I will need to load it and view the contents. 
-I originally completed this by using (f = pd.read_csv("iris_data_set.csv")) and this was successful but it didn't display headings. 
-As part of my research I have found a method that will display column names.<br>
-I have written this block of code twice as I found two possible way to complete this. One by using the method I have explained and the other 
-by using with open. 
+Once I downloaded the datset I stored it in a file named iris_data_set.csv. I then needed to read that csv file so I can view the contents. 
+I originally completed this by using (f = pd.read_csv("iris_data_set.csv")) and this was successful but it didn't display any headings as the
+csv file just contains the data. As part of my research I have found a method that will add and output column names.I have written two possible ways to 
+output the data set.
 
 ```python
     # Load the Pandas Libraries with the alias of pd
@@ -76,9 +75,10 @@ by using with open.
     # Load the NumPy Libraries with the alias of np
     import numpy as np
 
-    #When using the below code to view the data wont display headings See the with open section.
-    #Update on this is that I had to add a line naming the columns. See line 11.
-    # (DataFrame, Protopopov and Joshi, 2019)
+    # When using the below code to view the data wont display headings See the with open section.
+    # Update on this is that I had to add a line naming the columns. See line 11.]
+    # https://stackoverflow.com/a/34092032/5644281
+
     '''
     # Load the CSV file
     f = pd.read_csv("iris_data_set.csv")
