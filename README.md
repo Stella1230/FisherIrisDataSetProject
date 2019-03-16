@@ -22,10 +22,11 @@
 
 ###### How to view the Iris Dataset
 
-1. Download and install anaconda on your device ( I recommend version 3.7 +)
-1. Download and install Visual Studio Code
-1. Download Cmder command line (optional)
-1. Go to my repository https://github.com/richardfeeney7/FisherIrisDataSetProject
+1. Download and install anaconda on your device ( I recommend version 3.7 +).
+1. Download and install Visual Studio Code.
+1. Download Cmder command line (optional).
+1. Go to my repository https://github.com/richardfeeney7/FisherIrisDataSetProject to download the CSV file that contain the data. 
+1. Import the required libraries you want to use. I will give a description of the libraries I used later in this document
 
 
 <hr>
@@ -48,10 +49,22 @@
 </p>
 
 <br>
+<hr>
+
+#### Libraries Used
+
+Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ">. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
+
+* Pandas : 
+
+
 
 # Biobliography
 
+
+
 1. Kaggle.com. (2019). Iris Flower Dataset. [online] Available at: https://www.kaggle.com/arshid/iris-flower-dataset [Accessed 16 Mar. 2019].
+1. YouTube. (2019). Top 14 MOST famous Python libraries & frameworks. [online] Available at: https://www.youtube.com/watch?v=MqeO9lQemmQ [Accessed 16 Mar. 2019].
 1. Archive.ics.uci.edu. (2019). UCI Machine Learning Repository: Iris Data Set. [online] Available at: https://archive.ics.uci.edu/ml/datasets/iris [Accessed 16 Mar. 2019].
 1. 
 
