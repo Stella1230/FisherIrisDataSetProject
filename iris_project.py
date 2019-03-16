@@ -65,3 +65,12 @@ print(data.std())
 
 # Output n number of random rows from the set
 print(data.sample(5))
+print("\n")
+
+# Find if the set has any null values. 
+print(data.isnull())
+print("\n")
+
+# Find if the set has any null values that are grouped.
+print(data.isnull().sum())
+print("\n")

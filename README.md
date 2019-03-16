@@ -165,7 +165,25 @@ It is possible to add random rows from the set. This can be set to output n numb
     print(data.sample(5))
 ```
 
+### NULL Values
 
+Check the data set to see if it contains any null values. I have implemented this in two ways. The first option will display all the rows and contents.   <br>
+
+```python
+    # Find if the set has any null values. 
+    print(data.isnull())
+```
+
+This is the second option and is user friendly as it will group and sum the results 
+
+```python
+    # Find if the set has any null values. 
+    print(data.isnull().sum())
+```
+
+# Find if the set has any null values that are grouped.
+print(data.isnull().sum())
+print("\n")
 
 
 
