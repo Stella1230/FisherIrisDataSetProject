@@ -62,3 +62,6 @@ print(data.median())
 print(data.mean())
 print(data.std())
 '''
+
+# Output n number of random rows from the set
+print(data.sample(5))

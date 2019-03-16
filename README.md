@@ -152,6 +152,18 @@ I have found two ways to find a summary of each attribute. The describe method i
     print(data.std())
     '''
 ```
+<br>
+
+<img src="description.png" align="center">
+
+### Select Random Rows
+
+It is possible to add random rows from the set. This can be set to output n number of of rows. In my example I have set it to 5  <br>
+
+```python
+    # Output n number of random rows from the set
+    print(data.sample(5))
+```
 
 
 
