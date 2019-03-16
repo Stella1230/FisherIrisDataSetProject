@@ -150,11 +150,14 @@ I have found two ways to find a summary of each attribute. The describe method i
     print(data.median())
     print(data.mean())
     print(data.std())
+
+    <img src="description.png" align="center">
+
     '''
 ```
 <br>
 
-<img src="description.png" align="center">
+
 
 ### Select Random Rows
 
