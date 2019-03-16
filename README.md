@@ -57,7 +57,7 @@ Before starting this project I research some of the best libraries that are avai
 
 * Pandas : Pandas is king when you want to analyzing data using Python and it is one of the most popular tools to use. Pandas is open source for everyone to use. According to (McKinney, 2019) pandas was written by Wes McKinney. He also have a website http://pandas.pydata.org/ that is very useful to gain a better understanding of how and when it is used. Pandas will take in a file like CSV, TSV or SQL database and creates a python object. The important thing to remember is that Pandas is very important for anything that involves data. (YouTube, 2019)
 
-*Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
+* Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
 
 <br>
 <hr>
@@ -66,7 +66,7 @@ Before starting this project I research some of the best libraries that are avai
 
 Once I downloaded the datset I stored it in a file named iris_data_set.csv. I then needed to read that csv file so I can view the contents. 
 I originally completed this by using (f = pd.read_csv("iris_data_set.csv")) and this was successful but it didn't display any headings as the
-csv file just contains the data. As part of my research I have found a method that will add and output column names.I have written two possible ways to 
+csv file just contains the data. As part of my research I have found a method that will add and output column names. I have written two possible ways to 
 output the data set.
 
 ```python
@@ -94,6 +94,45 @@ output the data set.
         data = pd.read_csv(ds, names=cols)
     print(data)
 ```
+
+#### Confirm the amount of rows that are in the Data Set. 
+
+Below you will how I used a simple command to confirm that the csv file has the required 150 inputs. 
+
+```python
+    # Print the number of rows in the dataset.
+    print(data["Species"].count)
+
+```
+
+#### Print n number of Rows \ Columns. 
+
+The code below will output n number of rows from the top. In the below example I have specified 10. If no number is entered it will output 5 rows by default. <br>
+
+```python
+   # Print the first 10 rows
+   print(data.head(10))
+```
+
+The line of code below will prink n amount of rows from the end. I have specified 10. If no number is entered it will output 5 rows by default.<br>
+
+```python
+# Just like the finding rows from the beginning, we can also find rows from the end
+print(data.tail(10))
+```
+
+We can also check for the number of rows and columns that are in the table by inputting the following. <br>
+
+```python
+    # Display the amount of rows and columns in the set
+    print(data.shape)
+```
+
+#### Groupby
+
+
+
+
 
 
 
