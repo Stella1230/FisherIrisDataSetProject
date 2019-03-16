@@ -70,17 +70,18 @@ Before starting this project I research some of the best libraries that are avai
     # Load the NumPy Libraries with the alias of np
     import numpy as np
 
-    #When using the below code to view the data will work but wont have headings See the with open section for the update. 
-    #Update on this is that I had to add a line naming the columns. See line 11 
+    #When using the below code to view the data wont display headings See the with open section.
+    #Update on this is that I had to add a line naming the columns. See line 11.
+    # (DataFrame, Protopopov and Joshi, 2019)
     '''
     # Load the CSV file
     f = pd.read_csv("iris_data_set.csv")
-    f.columns = ['sepal_length', 'sepal_width' , 'petal_length', 'petal_width', 'species']  Refereance : (DataFrame, Protopopov and Joshi, 2019)
+    f.columns = ['sepal_length', 'sepal_width' , 'petal_length', 'petal_width', 'species'] 
 
     # Print the contents of the CSV file
     print(f)
     '''
-
+    # I have written the above commented code using with open
     # Open the CSV fine wil headings. 
     with open ("iris_data_set.csv") as ds:
         cols = ["Sepal Length", "Sepal Width" , "Petal Length", "Petal Width", "Species"]
