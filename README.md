@@ -19,6 +19,15 @@
 
 <br>
 
+
+###### How to view the Iris Dataset
+
+1. Download and install anaconda on your device ( I recommend version 3.7 +)
+1. Download and install Visual Studio Code
+1. Download Cmder command line (optional)
+1. Go to my repository https://github.com/richardfeeney7/FisherIrisDataSetProject
+
+
 <hr>
 
 #### Project Introduction
@@ -39,8 +48,6 @@
 </p>
 
 <br>
-
-###### To 
 
 # Biobliography
 
