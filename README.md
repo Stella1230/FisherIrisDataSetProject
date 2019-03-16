@@ -19,7 +19,6 @@
 
 <br>
 
-
 ###### How to view the Iris Dataset
 
 1. Download and install anaconda on your device ( I recommend version 3.7 +).
@@ -59,10 +58,12 @@ Before starting this project I research some of the best libraries that are avai
 
 * Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
 
+* seaborn : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
+
 <br>
 <hr>
 
-#### Reading and Printing the CSV File
+# Reading and Printing the CSV File
 
 Once I downloaded the datset I stored it in a file named iris_data_set.csv. I then needed to read that csv file so I can view the contents. 
 I originally completed this by using (f = pd.read_csv("iris_data_set.csv")) and this was successful but it didn't display any headings as the
@@ -95,6 +96,9 @@ output the data set.
     print(data)
 ```
 
+# Summarize the Dataset
+<br>
+
 #### Confirm the amount of rows that are in the Data Set. 
 
 Below you will how I used a simple command to confirm that the csv file has the required 150 inputs. 
@@ -117,18 +121,44 @@ The code below will output n number of rows from the top. In the below example I
 The line of code below will prink n amount of rows from the end. I have specified 10. If no number is entered it will output 5 rows by default.<br>
 
 ```python
-# Just like the finding rows from the beginning, we can also find rows from the end
-print(data.tail(10))
+    # Just like the finding rows from the beginning, we can also find rows from the end
+    print(data.tail(10))
 ```
 
-We can also check for the number of rows and columns that are in the table by inputting the following. <br>
+We can also check for the number of rows and columns that is in the data set the data contains with the shape property.<br>
 
 ```python
     # Display the amount of rows and columns in the set
     print(data.shape)
 ```
 
-#### Groupby
+#### Group by species
+
+Here I will group the different flowers by species and output the visual representation of each class. <br>
+
+```python
+    # Print the unique values of the data set and display the amount of rows in each class
+    data['Species'].unique()
+    print(data.groupby('Species').size())
+```
+#### Describe the table. 
+
+I have found two ways to find a summary of each attribute. The describe method it better as it is easier for viewing purposes. Both methods are below. 
+
+```python
+    # Describe the data (count, mean etc)
+    print(data.describe())
+    print("\n")
+
+    # Below commented out code does the same as the above describe command but is not visually a good option for all of them together.
+    '''
+    print(data.min())
+    print(data.max())
+    print(data.median())
+    print(data.mean())
+    print(data.std())
+    '''
+```
 
 
 
@@ -143,9 +173,11 @@ We can also check for the number of rows and columns that are in the table by in
 1. Kaggle.com. (2019). Iris Flower Dataset. [online] Available at: https://www.kaggle.com/arshid/iris-flower-dataset [Accessed 16 Mar. 2019].
 1. McKinney, W. (2019). About. [online] Wes McKinney. Available at: http://wesmckinney.com/pages/about.html [Accessed 16 Mar. 2019].
 1. Towards Data Science. (2019). Numpy Guide for People In a Hurry. [online] Available at: https://towardsdatascience.com/numpy-guide-for-people-in-a-hurry-22232699259f [Accessed 16 Mar. 2019].
+1. DataCamp Community. (2019). Python Seaborn Tutorial For Beginners. [online] Available at: https://www.datacamp.com/community/tutorials/seaborn-python-tutorial [Accessed 16 Mar. 2019].
 1. YouTube. (2019). Top 14 MOST famous Python libraries & frameworks. [online] Available at: https://www.youtube.com/watch?v=MqeO9lQemmQ [Accessed 16 Mar. 2019].
 1. Archive.ics.uci.edu. (2019). UCI Machine Learning Repository: Iris Data Set. [online] Available at: https://archive.ics.uci.edu/ml/datasets/iris [Accessed 16 Mar. 2019].
 1. YouTube. (2019). What is Numpy? Python for Data Science tutorial. [online] Available at: https://www.youtube.com/watch?v=pP5dQG0foTs [Accessed 16 Mar. 2019].
 1. YouTube. (2019). What is Pandas? Why and How to Use Pandas in Python. [online] Available at: https://www.youtube.com/watch?v=dcqPhpY7tWk [Accessed 16 Mar. 2019].
+1. Shane Lynn. (2019). The Pandas DataFrame – loading, editing, and viewing data in Python. [online] Available at: https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/?fbclid=IwAR0cYjeoMSFeqsEwwFTkJsT_OI9Pvr_v4ooj59tZpUnqmZvMYJ0PgQMGYmw [Accessed 16 Mar. 2019].
 
 
