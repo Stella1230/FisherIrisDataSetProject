@@ -7,9 +7,8 @@
 <br>
 
 # Introduction
-<br>
 
-###### Iris Data Set Project Outline And Objectives
+### Iris Data Set Project Outline And Objectives
 <p align ="justify"> The following project is based on the well-known Fisher’s Iris data set. In this project I will use this data set for researching and explaining what it it about and write some Python scripts to backup and explain my findings. The main objectives are as follows</p>
 
 1. Research background information about the data set and write a summary about it. 
@@ -21,7 +20,7 @@
 
 <br>
 
-###### Project Introduction
+### Project Introduction
 
 <img src="iris_dataset.jpg" alt="Iris Dataset Example" width="300" height="400" title ="Iris Dataset" align ="left">
 <p align="justify">
@@ -34,11 +33,9 @@
     <kbd><img src="iris_flowers.jpg" alt="Iris Flowers" width="300" height="200" title ="Iris Flowers"></kbd>
     <kbd><img src="iris_flower.png" alt="Iris Flower" width="300" height="200" title ="Iris Flower Measurement"></kbd>
 </p>
-
 <br>
-<hr>
 
-###### How to view the Iris Dataset
+### How to view the Iris Dataset
 
 1. Download and install anaconda on your device ( I recommend version 3.7 +).
 1. Download and install Visual Studio Code.
@@ -46,21 +43,7 @@
 1. Go to my repository https://github.com/richardfeeney7/FisherIrisDataSetProject to download the CSV file that contain the data. 
 1. Import the required libraries you want to use. I will give a description of the libraries I used later in this document
 
-
-<hr>
-
-###### Libraries Used
-
-Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ" target="_blank">here</a>. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
-
-* Pandas : Pandas is king when you want to analyzing data using Python and it is one of the most popular tools to use. Pandas is open source for everyone to use. According to (McKinney, 2019) pandas was written by Wes McKinney. He also have a website http://pandas.pydata.org/ that is very useful to gain a better understanding of how and when it is used. Pandas will take in a file like CSV, TSV or SQL database and creates a python object. The important thing to remember is that Pandas is very important for anything that involves data. (YouTube, 2019)
-
-* Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
-
-* seaborn : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
-
-<br>
-<hr>
+<br><hr>
 
 # Reading and Printing the CSV File
 
@@ -95,6 +78,18 @@ output the data set.
     print(data)
 ```
 
+### Libraries Used
+
+Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ" target="_blank">here</a>. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
+
+* Pandas : Pandas is king when you want to analyzing data using Python and it is one of the most popular tools to use. Pandas is open source for everyone to use. According to (McKinney, 2019) pandas was written by Wes McKinney. He also have a website http://pandas.pydata.org/ that is very useful to gain a better understanding of how and when it is used. Pandas will take in a file like CSV, TSV or SQL database and creates a python object. The important thing to remember is that Pandas is very important for anything that involves data. (YouTube, 2019)
+
+* Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
+
+* seaborn : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
+
+<hr>
+
 # Summarize the Dataset
 <br>
 
@@ -108,7 +103,7 @@ Below you will how I used a simple command to confirm that the csv file has the 
 
 ```
 
-#### Print n number of Rows \ Columns. 
+### Print n number of Rows \ Columns. 
 
 The code below will output n number of rows from the top. In the below example I have specified 10. If no number is entered it will output 5 rows by default. <br>
 
@@ -131,7 +126,7 @@ We can also check for the number of rows and columns that is in the data set the
     print(data.shape)
 ```
 
-#### Group by species
+### Group by species
 
 Here I will group the different flowers by species and output the visual representation of each class. <br>
 
@@ -140,7 +135,7 @@ Here I will group the different flowers by species and output the visual represe
     data['Species'].unique()
     print(data.groupby('Species').size())
 ```
-#### Describe the table. 
+### Describe the table. 
 
 I have found two ways to find a summary of each attribute. The describe method it better as it is easier for viewing purposes. Both methods are below. 
 
