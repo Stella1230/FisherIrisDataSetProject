@@ -154,7 +154,7 @@ I have found two ways to find a summary of each attribute. The describe method i
 ```
 <br>
 
-<img src="description.png" align="centre">
+<p align="cener"<img src="description.png" alt="Iris Description" title ="Iris Dataset"></p>
 
 ### Select Random Rows
 
