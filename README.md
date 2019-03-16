@@ -88,8 +88,6 @@ Before starting this project I research some of the best libraries that are avai
 
 * seaborn : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
 
-<hr>
-
 # Summarize the Dataset
 <br>
 

@@ -44,7 +44,7 @@ print("\n")
 print(data.tail(10))
 '''
 
-# Print the unique values of the data set and display the amount
+# Print the unique values of the data set and display the number of rows that belong to each
 data['Species'].unique()
 print(data.groupby('Species').size())
 print("\n")
@@ -54,7 +54,8 @@ print("\n")
 print(data.describe())
 print("\n")
 
-# Below commented out code does the same as the above describe command but is not visually a good option for all of them together.
+# Below commented out code does the same as the above describe command but is not visually a good option for 
+# all of them together.
 '''
 print(data.min())
 print(data.max())
