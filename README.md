@@ -53,7 +53,7 @@
 
 #### Libraries Used
 
-Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ">here</a>. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
+Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ" target="_blank">here</a>. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
 
 * Pandas : 
 
