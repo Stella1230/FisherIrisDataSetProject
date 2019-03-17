@@ -199,7 +199,7 @@ I have used bin=20 and implemented the use of seaborn on the graph too. Seaborn 
 histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
 <br>
 
-Histogram based on Sepal Length that is is CM
+Histogram based on Sepal Length that in CM
 ```python
     # Histagram for Sepal Length
     #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
@@ -217,7 +217,7 @@ Histogram based on Sepal Length that is is CM
 
 <br>
 
-Histogram based on Sepal Width that is is CM
+Histogram based on Sepal Width that in CM
 ```python
     # Histagram for Sepal Width
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
@@ -234,7 +234,7 @@ Histogram based on Sepal Width that is is CM
 ```
 <br>
 
-Histogram based on Petal Length that is is CM
+Histogram based on Petal Length in CM
 ```python
     # Histagram for Petal Length
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
@@ -251,7 +251,7 @@ Histogram based on Petal Length that is is CM
 ```
 <br>
 
-Histogram based on Petal Width that is is CM
+Histogram based on Petal Width in CM
 ```python
     # Histagram for Petal Width
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
