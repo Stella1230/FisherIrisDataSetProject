@@ -215,7 +215,7 @@ Histogram based on Sepal Length that in CM
     plt.show()                          # Show graph
 ```
 
-<p align="center"><img src="sepal_length.png" alt="Sepal Length" title ="Sepal Length" height="200" width="200"></p>
+<p align="center"><img src="sepal_length.png" alt="Sepal Length" title ="Sepal Length" height="400" width="400"></p>
 
 <br>
 
