@@ -181,9 +181,109 @@ This is the second option and is user friendly as it will group and sum the resu
     print(data.isnull().sum())
 ```
 
-# Find if the set has any null values that are grouped.
+### Find if the set has any null values that are grouped.
 print(data.isnull().sum())
 print("\n")
+
+# Visualize the data
+
+In this section I will display visual representation. Just to note that we should always label our axis so people know what we are plotting. 
+
+### Histogram
+
+The histogram is very useful when we want to explore our data and give us an understanding of the distribution of the data set. We can set the bin size
+and by default this is set to 10. It is a good idea to change the bin size as it will output the graph in different ways and might potentially display something hidden.
+I have used bin=20 and implemented the use of seaborn on the graph too. Seaborn uses the distplot function to create histograms. One thing to note, when creating the 
+histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
+<br>
+
+Histogram based on Sepal Length that is is CM
+```python
+    # Histagram for Sepal Length
+    #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
+    sns.set_style("darkgrid")      # Use seaborn on background
+    plt.figure(figsize = (10, 7))  # Adjust the size of the graph
+    x = data["Sepal Length"]       # Find the Sepal Length and store in x
+    # Bin based on Sepal Length
+    # Bins are set to 10 by default. I have included is for view purposes
+    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    plt.title("Histagram - Sepal Length(cm)")# Title of graph
+    plt.xlabel("Sepal_Length_cm")       # Xlabel 
+    plt.ylabel("Count")                 # Ylabel
+    plt.show()                          # Show graph
+```
+
+<br>
+Histogram based on Sepal Width that is is CM
+```python
+    # Histagram for Sepal Width
+    #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
+    sns.set()                       # Use default seaborn on background
+    plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+    x = data["Sepal Width"]         # Find the Sepal Length and store in x
+    # Bin based on Sepal Length
+    # Bins are set to 10 by default. I have included is for view purposes
+    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    plt.title("Histagram- Sepal Width (cm)")# Title of graph
+    plt.xlabel("Sepal_width_cm")            # Xlabel 
+    plt.ylabel("Count")                     # Ylabel
+    plt.show()                              # Show graph
+```
+<br>
+
+Histogram based on Petal Length that is is CM
+```python
+    # Histagram for Petal Length
+    #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
+    sns.set()                       # Use default seaborn on background
+    plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+    x = data["Petal Length"]        # Find the Sepal Length and store in x
+    # Bin based on Sepal Length
+    # Bins are set to 10 by default. I have included is for view purposes
+    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    plt.title("Histagram - Petal Length(cm)")# Title of graph
+    plt.xlabel("Petal_Length_cm")            # Xlabel 
+    plt.ylabel("Count")                     # Ylabel
+    plt.show()                              # Show graph     
+```
+<br>
+
+Histogram based on Petal Width that is is CM
+```python
+    # Histagram for Petal Width
+    #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
+    sns.set()                       # Use default seaborn on background
+    plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+    x = data["Petal Width"]         # Find the Sepal Length and store in x
+    # Bin based on Sepal Length
+    # Bins are set to 10 by default. I have included is for view purposes
+    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    plt.title("Histagram - Petal Width(cm)")# Title of graph
+    plt.xlabel("Petal_Width_cm")            # Xlabel 
+    plt.ylabel("Count")                     # Ylabel
+    plt.show()                              # Show graph
+```
+
+## Box Plot
+
+I have used seaborn to generate a box plot. I have used a different background style on this one. 
+
+```python
+    # Box plot. 
+    plt.figure(figsize = (10, 7))  # Adjust the size of the graph
+    sns.set_style("ticks")      # Use seaborn on background
+    plt.title("Box Plot")     # Title of graph
+    sns.boxplot(data=data) # Use seaborn to generate a box plot
+    plt.show()
+```
+
+
+
+
+
+
+
+
 
 
 
@@ -192,7 +292,10 @@ print("\n")
 
 # Biobliography
 
+1. Medium. (2019). Basic Analysis of the Iris Data set Using Python. [online] Available at: https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342 [Accessed 16 Mar. 2019].
 1. DataFrame, H., Protopopov, A. and Joshi, B. (2019). How to add header row to a pandas DataFrame. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe [Accessed 16 Mar. 2019].
+1. Holtz, Y. (2019). #104 Seaborn Themes. [online] The Python Graph Gallery. Available at: https://python-graph-gallery.com/104-seaborn-themes/ [Accessed 17 Mar. 2019].
+1. Kaggle.com. (2019). Iris Data Analysis and Machine Learning(Python) | Kaggle. [online] Available at: https://www.kaggle.com/gopaltirupur/iris-data-analysis-and-machine-learning-python [Accessed 16 Mar. 2019].
 1. Kaggle.com. (2019). Iris Flower Dataset. [online] Available at: https://www.kaggle.com/arshid/iris-flower-dataset [Accessed 16 Mar. 2019].
 1. McKinney, W. (2019). About. [online] Wes McKinney. Available at: http://wesmckinney.com/pages/about.html [Accessed 16 Mar. 2019].
 1. Towards Data Science. (2019). Numpy Guide for People In a Hurry. [online] Available at: https://towardsdatascience.com/numpy-guide-for-people-in-a-hurry-22232699259f [Accessed 16 Mar. 2019].
@@ -200,7 +303,9 @@ print("\n")
 1. YouTube. (2019). Top 14 MOST famous Python libraries & frameworks. [online] Available at: https://www.youtube.com/watch?v=MqeO9lQemmQ [Accessed 16 Mar. 2019].
 1. Archive.ics.uci.edu. (2019). UCI Machine Learning Repository: Iris Data Set. [online] Available at: https://archive.ics.uci.edu/ml/datasets/iris [Accessed 16 Mar. 2019].
 1. YouTube. (2019). What is Numpy? Python for Data Science tutorial. [online] Available at: https://www.youtube.com/watch?v=pP5dQG0foTs [Accessed 16 Mar. 2019].
+1. Seaborn.pydata.org. (2019). seaborn: statistical data visualization — seaborn 0.9.0 documentation. [online] Available at: https://seaborn.pydata.org/ [Accessed 17 Mar. 2019].
 1. YouTube. (2019). What is Pandas? Why and How to Use Pandas in Python. [online] Available at: https://www.youtube.com/watch?v=dcqPhpY7tWk [Accessed 16 Mar. 2019].
+1. Pandas.pydata.org. (2019). pandas.DataFrame.plot — pandas 0.22.0 documentation. [online] Available at: https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.DataFrame.plot.html [Accessed 17 Mar. 2019].
 1. Shane Lynn. (2019). The Pandas DataFrame – loading, editing, and viewing data in Python. [online] Available at: https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/?fbclid=IwAR0cYjeoMSFeqsEwwFTkJsT_OI9Pvr_v4ooj59tZpUnqmZvMYJ0PgQMGYmw [Accessed 16 Mar. 2019].
 
 

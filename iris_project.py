@@ -3,8 +3,10 @@ import pandas as pd
 # Load the NumPy Libraries with the alias of np
 import numpy as np
 
-# Data visualization 
-import seaborn as sb
+# statistical data visualization 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 #When using the below code to view the data will work but wont have headings See the with open section for the update. 
 #Update on this is that I had to add a line naming the columns. See line 11 
@@ -23,6 +25,10 @@ with open ("iris_data_set.csv") as ds: #
     data = pd.read_csv(ds, names=cols)
 print(data)
 print("\n")
+
+
+
+
 
 # Print the number of rows in the dataset.
 print(data["Species"].count)
@@ -74,3 +80,75 @@ print("\n")
 # Find if the set has any null values that are grouped.
 print(data.isnull().sum())
 print("\n")
+
+
+
+
+# Histagram for Sepal Length
+sns.set_style("darkgrid")      # Use seaborn on background
+plt.figure(figsize = (10, 7))  # Adjust the size of the graph
+x = data["Sepal Length"]       # Find the Sepal Length and store in x
+# Bin based on Sepal Length
+# Bins are set to 10 by default. I have included is for view purposes
+sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+plt.title("Histagram - Sepal Length(cm)")# Title of graph
+plt.xlabel("Sepal_Length_cm")       # Xlabel 
+plt.ylabel("Count")                 # Ylabel
+plt.grid(True)
+plt.show()                          # Show graph
+
+
+# Histagram for Sepal Width
+sns.set()                       # Use default seaborn on background
+plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+x = data["Sepal Width"]        # Find the Sepal Length and store in x
+# Bin based on Sepal Length
+# Bins are set to 10 by default. I have included is for view purposes
+sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+plt.title("Histagram- Sepal Width (cm)")# Title of graph
+plt.xlabel("Sepal_width_cm")            # Xlabel 
+plt.ylabel("Count")                     # Ylabel
+plt.show()                              # Show graph
+
+
+
+# Histagram for Petal Length
+sns.set()                       # Use default seaborn on background
+plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+x = data["Petal Length"]        # Find the Sepal Length and store in x
+# Bin based on Sepal Length
+# Bins are set to 10 by default. I have included is for view purposes
+sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+plt.title("Histagram - Petal Length(cm)")# Title of graph
+plt.xlabel("Petal_Length_cm")            # Xlabel 
+plt.ylabel("Count")                     # Ylabel
+plt.show()                              # Show graph
+
+
+
+# Histagram for Petal Width
+sns.set()                       # Use default seaborn on background
+plt.figure(figsize = (10, 7))   # Adjust the size of the graph
+x = data["Petal Width"]        # Find the Sepal Length and store in x
+# Bin based on Sepal Length
+# Bins are set to 10 by default. I have included is for view purposes
+sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+plt.title("Histagram - Petal Width(cm)")# Title of graph
+plt.xlabel("Petal_Width_cm")            # Xlabel 
+plt.ylabel("Count")                     # Ylabel
+plt.show()                              # Show graph
+
+
+
+
+# Box plot. 
+plt.figure(figsize = (10, 7))  # Adjust the size of the graph
+sns.set_style("ticks")      # Use seaborn on background
+plt.title("Box Plot")     # Title of graph
+sns.boxplot(data=data) # Use seaborn to generate a box plot
+plt.show()
+
+
+
+
+        
