@@ -234,6 +234,7 @@ Histogram based on Sepal Width that in CM
     plt.ylabel("Count")                     # Ylabel
     plt.show()                              # Show graph
 ```
+<p align="center"><img src="sepal_width.png" alt="Sepal Width" title ="Sepal Width" height="400" width="600"></p>
 
 <br>
 
@@ -252,6 +253,9 @@ Histogram based on Petal Length in CM
     plt.ylabel("Count")                     # Ylabel
     plt.show()                              # Show graph     
 ```
+
+<p align="center"><img src="petal_length.png" alt="Petal Length" title ="Petal Length" height="400" width="600"></p>
+
 <br>
 
 Histogram based on Petal Width in CM
@@ -269,14 +273,22 @@ Histogram based on Petal Width in CM
     plt.ylabel("Count")                     # Ylabel
     plt.show()                              # Show graph
 ```
-Display the four Histograms together. 
 
+<p align="center"><img src="petal_width.png" alt="Petal Width" title ="Petal Width" height="400" width="600"></p>
+
+<br>
+
+Display the four Histograms together. 
 ```python
     #The four histograms together.
     data.hist(bins = 20)     # All graphs
     plt.grid(True)           # Display a grid
     plt.show()               #show plot
 ```
+
+<p align="center"><img src="allHistograms.png" alt="All Histograms" title ="All Histograms" height="400" width="600"></p>
+
+<br>
 
 ## Box Plot
 
@@ -290,13 +302,21 @@ I have used seaborn to generate a box plot. I have used a different background s
     sns.boxplot(data=data)         # Use seaborn to generate a box plot
     plt.show()
 ```
-Box plot grouped by species. 
 
+<p align="center"><img src="box_plot.png" alt="Box Plot" title ="Box Plot" height="400" width="600"></p>
+
+<br>
+
+Box plot grouped by species. 
 ```python
     # Box Plot Grouped By Species
     data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
     plt.show()   # Show graph
 ```
+
+<p align="center"><img src="grouped_box_plot.png" alt="Grouped Box Plot" title ="Grouped Box Plot" height="400" width="600"></p>
+
+<br>
 
 
 
