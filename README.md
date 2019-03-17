@@ -219,7 +219,7 @@ Histogram based on Sepal Length that in CM
 
 <br>
 
-Histogram based on Sepal Width that in CM
+#### Histogram based on Sepal Width that in CM
 ```python
     # Histagram for Sepal Width
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
@@ -238,7 +238,7 @@ Histogram based on Sepal Width that in CM
 
 <br>
 
-Histogram based on Petal Length in CM
+#### Histogram based on Petal Length in CM
 ```python
     # Histagram for Petal Length
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
@@ -258,7 +258,7 @@ Histogram based on Petal Length in CM
 
 <br>
 
-Histogram based on Petal Width in CM
+#### Histogram based on Petal Width in CM
 ```python
     # Histagram for Petal Width
     #plt.grid(True)                 # Used sns.set instead to display the grid and set a background color
@@ -278,7 +278,7 @@ Histogram based on Petal Width in CM
 
 <br>
 
-Display the four Histograms together. 
+#### Display the four Histograms together. 
 ```python
     #The four histograms together.
     data.hist(bins = 20)     # All graphs
@@ -290,7 +290,9 @@ Display the four Histograms together.
 
 <br>
 
-## Box Plot
+### Box Plots
+
+#### Box plot
 
 I have used seaborn to generate a box plot. I have used a different background style on this one. 
 
