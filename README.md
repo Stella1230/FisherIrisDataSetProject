@@ -182,8 +182,10 @@ This is the second option and is user friendly as it will group and sum the resu
 ```
 
 ### Find if the set has any null values that are grouped.
-print(data.isnull().sum())
-print("\n")
+```python
+    print(data.isnull().sum())
+    print("\n")
+```
 
 # Visualize the data
 
