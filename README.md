@@ -294,7 +294,7 @@ histograms I used seaborn to set the style with a background grid set to dark an
 
 #### Box plot
 
-I have used seaborn to generate a box plot. I have used a different background style on this one. 
+I have used seaborn to generate a box plot. I have used a different background style on this one. The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis.
 
 ```python
     # Box plot. 
