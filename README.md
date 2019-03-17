@@ -215,6 +215,8 @@ Histogram based on Sepal Length that in CM
     plt.show()                          # Show graph
 ```
 
+<p align="center"><img src="sepl.png" alt="Sepal Length" title ="Sepal Length"></p>
+
 <br>
 
 Histogram based on Sepal Width that in CM
@@ -232,6 +234,7 @@ Histogram based on Sepal Width that in CM
     plt.ylabel("Count")                     # Ylabel
     plt.show()                              # Show graph
 ```
+
 <br>
 
 Histogram based on Petal Length in CM
@@ -287,7 +290,13 @@ I have used seaborn to generate a box plot. I have used a different background s
     sns.boxplot(data=data)         # Use seaborn to generate a box plot
     plt.show()
 ```
+Box plot grouped by species. 
 
+```python
+    # Box Plot Grouped By Species
+    data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
+    plt.show()   # Show graph
+```
 
 
 

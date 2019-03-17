@@ -144,9 +144,9 @@ plt.show()                              # Show graph
 
 
 #The four histograms together.
-data.hist(bins = 20)  # All graphs
+data.hist(bins = 20, figsize = (10, 7))  # Display graphs and resize window
 plt.grid(True)        # Display a grid
-plt.show()           # Show graph
+plt.show()            # Show graph
 
 
 # Box plot. 
@@ -154,9 +154,11 @@ plt.figure(figsize = (10, 7)) # Adjust the size of the graph
 sns.set_style("ticks")        # Use seaborn on background
 plt.title("Box Plot")         # Title of graph
 sns.boxplot(data=data)        # Use seaborn to generate a box plot
-plt.show()
+plt.show()                    # Show graph
 
-
+# Box Plot Grouped By Species
+data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
+plt.show()   # Show graph
 
 
         
