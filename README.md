@@ -225,7 +225,7 @@ Histogram based on Sepal Width that is is CM
     x = data["Sepal Width"]         # Find the Sepal Length and store in x
     # Bin based on Sepal Length
     # Bins are set to 10 by default. I have included is for view purposes
-    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    sns.distplot(x, bins = 20, color = "blue")# Plot x, give color blue, set the bins using seaborn
     plt.title("Histagram- Sepal Width (cm)")# Title of graph
     plt.xlabel("Sepal_width_cm")            # Xlabel 
     plt.ylabel("Count")                     # Ylabel
@@ -242,7 +242,7 @@ Histogram based on Petal Length that is is CM
     x = data["Petal Length"]        # Find the Sepal Length and store in x
     # Bin based on Sepal Length
     # Bins are set to 10 by default. I have included is for view purposes
-    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    sns.distplot(x, bins = 20, color = "blue")# Plot x, give color blue, set the bins using seaborn
     plt.title("Histagram - Petal Length(cm)")# Title of graph
     plt.xlabel("Petal_Length_cm")            # Xlabel 
     plt.ylabel("Count")                     # Ylabel
@@ -259,7 +259,7 @@ Histogram based on Petal Width that is is CM
     x = data["Petal Width"]         # Find the Sepal Length and store in x
     # Bin based on Sepal Length
     # Bins are set to 10 by default. I have included is for view purposes
-    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    sns.distplot(x, bins = 20, color = "blue")# Plot x, give color blue, set the bins using seaborn
     plt.title("Histagram - Petal Width(cm)")# Title of graph
     plt.xlabel("Petal_Width_cm")            # Xlabel 
     plt.ylabel("Count")                     # Ylabel
