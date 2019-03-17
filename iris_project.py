@@ -140,20 +140,20 @@ sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a colo
 plt.title("Histagram - Petal Width(cm)")# Title of graph
 plt.xlabel("Petal_Width_cm")            # Xlabel 
 plt.ylabel("Count")                     # Ylabel
-plt.show()                              # Show 
+plt.show()                              # Show graph
 
 
 #The four histograms together.
-data.hist(bins = 20)     # All graphs
-plt.grid(True)  # Display a grid
-plt.show()      #show plot
+data.hist(bins = 20)  # All graphs
+plt.grid(True)        # Display a grid
+plt.show()           # Show graph
 
 
 # Box plot. 
-plt.figure(figsize = (10, 7))  # Adjust the size of the graph
-sns.set_style("ticks")      # Use seaborn on background
-plt.title("Box Plot")     # Title of graph
-sns.boxplot(data=data) # Use seaborn to generate a box plot
+plt.figure(figsize = (10, 7)) # Adjust the size of the graph
+sns.set_style("ticks")        # Use seaborn on background
+plt.title("Box Plot")         # Title of graph
+sns.boxplot(data=data)        # Use seaborn to generate a box plot
 plt.show()
 
 

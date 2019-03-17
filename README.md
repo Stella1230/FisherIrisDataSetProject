@@ -271,8 +271,8 @@ Display the four Histograms together.
 ```python
     #The four histograms together.
     data.hist(bins = 20)     # All graphs
-    plt.grid(True)  # Display a grid
-    plt.show()      #show plot
+    plt.grid(True)           # Display a grid
+    plt.show()               #show plot
 ```
 
 ## Box Plot
@@ -282,9 +282,9 @@ I have used seaborn to generate a box plot. I have used a different background s
 ```python
     # Box plot. 
     plt.figure(figsize = (10, 7))  # Adjust the size of the graph
-    sns.set_style("ticks")      # Use seaborn on background
-    plt.title("Box Plot")     # Title of graph
-    sns.boxplot(data=data) # Use seaborn to generate a box plot
+    sns.set_style("ticks")         # Use seaborn on background
+    plt.title("Box Plot")          # Title of graph
+    sns.boxplot(data=data)         # Use seaborn to generate a box plot
     plt.show()
 ```
 
