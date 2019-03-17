@@ -82,16 +82,16 @@ output the data set.
 
 Before starting this project I research some of the best libraries that are available to me. I found a great video that you can find following the link provided <a href ="https://www.youtube.com/watch?v=MqeO9lQemmQ" target="_blank">here</a>. This was a great help to understand some of the most popular packages that are used today by developers. Please find the libraries I have used below. 
 
-* Pandas : Pandas is king when you want to analyzing data using Python and it is one of the most popular tools to use. Pandas is open source for everyone to use. According to (McKinney, 2019) pandas was written by Wes McKinney. He also have a website http://pandas.pydata.org/ that is very useful to gain a better understanding of how and when it is used. Pandas will take in a file like CSV, TSV or SQL database and creates a python object. The important thing to remember is that Pandas is very important for anything that involves data. (YouTube, 2019)
+* *Pandas* : Pandas is king when you want to analyzing data using Python and it is one of the most popular tools to use. Pandas is open source for everyone to use. According to (McKinney, 2019) pandas was written by Wes McKinney. He also have a website http://pandas.pydata.org/ that is very useful to gain a better understanding of how and when it is used. Pandas will take in a file like CSV, TSV or SQL database and creates a python object. The important thing to remember is that Pandas is very important for anything that involves data. (YouTube, 2019)
 
-* Numpy : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
+* *Numpy* : NumPy is another fundamental package that is needed for completing scientific computing tasks using Python. NumPy is used on arrays and the math that goes along with using those arrays for the desired outcome. It is much faster and easier to manipulate these NumPy arrays than the traditional lists and loops that we have used to this point in Python. (Towards Data Science, 2019)
 
-* seaborn : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
+* *seaborn* : This library is a Python visualization library based on matplotlib and It provides a high-level interface for drawing attractive statistical graphics. The role of Data Analysis is to receive a give set of data and manipulate that data that can be viewed easily or extracting key elements. (DataCamp Community, 2019)
 
 # Summarize the Dataset
 <br>
 
-#### Confirm the amount of rows that are in the Data Set. 
+### Confirm the amount of rows that are in the Data Set. 
 
 Below you will how I used a simple command to confirm that the csv file has the required 150 inputs. 
 
@@ -199,7 +199,7 @@ I have used bin=20 and implemented the use of seaborn on the graph too. Seaborn 
 histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
 <br>
 
-Histogram based on Sepal Length that in CM
+### Histogram based on Sepal Length that in CM
 ```python
     # Histagram for Sepal Length
     #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
