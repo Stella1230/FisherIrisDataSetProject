@@ -208,7 +208,7 @@ Histogram based on Sepal Length that is is CM
     x = data["Sepal Length"]       # Find the Sepal Length and store in x
     # Bin based on Sepal Length
     # Bins are set to 10 by default. I have included is for view purposes
-    sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
+    sns.distplot(x, bins = 20, color = "blue")# Plot x, give color blue, set the bins using seaborn
     plt.title("Histagram - Sepal Length(cm)")# Title of graph
     plt.xlabel("Sepal_Length_cm")       # Xlabel 
     plt.ylabel("Count")                 # Ylabel
