@@ -266,6 +266,14 @@ Histogram based on Petal Width that is is CM
     plt.ylabel("Count")                     # Ylabel
     plt.show()                              # Show graph
 ```
+Display the four Histograms together. 
+
+```python
+    #The four histograms together.
+    data.hist(bins = 20)     # All graphs
+    plt.grid(True)  # Display a grid
+    plt.show()      #show plot
+```
 
 ## Box Plot
 

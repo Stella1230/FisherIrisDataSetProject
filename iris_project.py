@@ -85,6 +85,7 @@ print("\n")
 
 
 # Histagram for Sepal Length
+ #plt.grid(True)               # Used sns.set instead to display the grid and set a background color
 sns.set_style("darkgrid")      # Use seaborn on background
 plt.figure(figsize = (10, 7))  # Adjust the size of the graph
 x = data["Sepal Length"]       # Find the Sepal Length and store in x
@@ -99,9 +100,10 @@ plt.show()                          # Show graph
 
 
 # Histagram for Sepal Width
+ #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
 sns.set()                       # Use default seaborn on background
 plt.figure(figsize = (10, 7))   # Adjust the size of the graph
-x = data["Sepal Width"]        # Find the Sepal Length and store in x
+x = data["Sepal Width"]         # Find the Sepal Length and store in x
 # Bin based on Sepal Length
 # Bins are set to 10 by default. I have included is for view purposes
 sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
@@ -113,6 +115,7 @@ plt.show()                              # Show graph
 
 
 # Histagram for Petal Length
+ #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
 sns.set()                       # Use default seaborn on background
 plt.figure(figsize = (10, 7))   # Adjust the size of the graph
 x = data["Petal Length"]        # Find the Sepal Length and store in x
@@ -127,18 +130,23 @@ plt.show()                              # Show graph
 
 
 # Histagram for Petal Width
+ #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
 sns.set()                       # Use default seaborn on background
 plt.figure(figsize = (10, 7))   # Adjust the size of the graph
-x = data["Petal Width"]        # Find the Sepal Length and store in x
+x = data["Petal Width"]         # Find the Sepal Length and store in x
 # Bin based on Sepal Length
 # Bins are set to 10 by default. I have included is for view purposes
 sns.distplot(x, bins = 20, color = "blue")  # Plot the graph with x, give a color blue  and set the bins using seaborn
 plt.title("Histagram - Petal Width(cm)")# Title of graph
 plt.xlabel("Petal_Width_cm")            # Xlabel 
 plt.ylabel("Count")                     # Ylabel
-plt.show()                              # Show graph
+plt.show()                              # Show 
 
 
+#The four histograms together.
+data.hist(bins = 20)     # All graphs
+plt.grid(True)  # Display a grid
+plt.show()      #show plot
 
 
 # Box plot. 
