@@ -1,11 +1,29 @@
 # Load the Pandas Libraries with the alias of pd
 import pandas as pd
+from pandas.tools.plotting import scatter_matrix
 # Load the NumPy Libraries with the alias of np
 import numpy as np
+from sklearn import tree
 
 # statistical data visualization 
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+
+# Load libraries
+import pandas
+from pandas.plotting import scatter_matrix
+import matplotlib.pyplot as plt
+from sklearn import model_selection
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
 
 
 #When using the below code to view the data will work but wont have headings See the with open section for the update. 
@@ -38,6 +56,10 @@ print("\n")
 print(data.shape)
 print("\n")
 
+# What are the column names in the set
+print(data.columns)
+print("\n")
+
 print(type(data))
 print("\n")
 
@@ -56,7 +78,7 @@ print(data.groupby('Species').size())
 print("\n")
 
 
-# summary of each attribute
+# Summary of each attribute
 print(data.describe())
 print("\n")
 
@@ -80,7 +102,6 @@ print("\n")
 # Find if the set has any null values that are grouped.
 print(data.isnull().sum())
 print("\n")
-
 
 
 
@@ -161,4 +182,26 @@ data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
 plt.show()   # Show graph
 
 
-        
+
+# Scatter Plots
+
+# scatter plot matrix
+sns.set()    # Use seaborn to add style ie Graph
+pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
+plt.show()   # Show graph
+#Note the diagonal grouping of some pairs of attributes. This suggests a high correlation and a predictable relationship.
+
+
+
+# Scatter Plot with x and y axis defined
+sns.set()    # Use seaborn to add style ie Graph
+data.plot(kind="scatter", x="Sepal Length", y="Sepal Width", figsize = (10, 7))
+plt.show()  # Show graph
+
+# Scatter Plot with x and y axis defined with color
+sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
+# Colour(hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
+sns.FacetGrid(data, hue="Species", size=7) \
+    .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
+    .add_legend()  # Add a legend to define what colour belongs to each species
+plt.show()         # Show graph

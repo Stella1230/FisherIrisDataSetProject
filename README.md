@@ -101,7 +101,7 @@ Below you will how I used a simple command to confirm that the csv file has the 
 
 ```
 
-### Print n number of Rows \ Columns. 
+### Peek at the data. 
 
 The code below will output n number of rows from the top. In the below example I have specified 10. If no number is entered it will output 5 rows by default. <br>
 
@@ -116,6 +116,7 @@ The line of code below will prink n amount of rows from the end. I have specifie
     # Just like the finding rows from the beginning, we can also find rows from the end
     print(data.tail(10))
 ```
+### Dimensions of the Dataset.
 
 We can also check for the number of rows and columns that is in the data set the data contains with the shape property.<br>
 
@@ -124,16 +125,25 @@ We can also check for the number of rows and columns that is in the data set the
     print(data.shape)
 ```
 
-### Group by species
+###### What are the names of the columns in the Dataset.
 
-Here I will group the different flowers by species and output the visual representation of each class. <br>
+After viewing the shape of the data set we receive the output (150 , 5). Now lets find out what the name of the columns are.<br>
+
+```python
+    # What are the column names in the set
+    print(data.columns)
+```
+
+### Class Distribution
+
+Here I will group the different flowers by species and output the visual representation of each class. We can see from the result that this is a balanced data set because all the classes are the same size. This is important to know because how we analyise unbalanced data sets is slightly different. <br>
 
 ```python
     # Print the unique values of the data set and display the amount of rows in each class
     data['Species'].unique()
     print(data.groupby('Species').size())
 ```
-### Describe the table. 
+### Statistical Summary. 
 
 I have found two ways to find a summary of each attribute. The describe method it better as it is easier for viewing purposes. Both methods are below. 
 
@@ -197,6 +207,9 @@ The histogram is very useful when we want to explore our data and give us an und
 and by default this is set to 10. It is a good idea to change the bin size as it will output the graph in different ways and might potentially display something hidden.
 I have used bin=20 and implemented the use of seaborn on the graph too. Seaborn uses the distplot function to create histograms. One thing to note, when creating the 
 histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
+
+From the graphs we can see that two of the variables seem to indicate a bell shaped curve or Normal distribution. It is possible to write algorithms to exploit this.
+
 <br>
 
 ### Histogram based on Sepal Length that in CM
@@ -294,7 +307,8 @@ histograms I used seaborn to set the style with a background grid set to dark an
 
 #### Box plot
 
-I have used seaborn to generate a box plot. I have used a different background style on this one. 
+The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis and
+offers a much clearer indication of the distribution. 
 
 ```python
     # Box plot. 
@@ -320,15 +334,51 @@ Box plot grouped by species.
 
 <br>
 
+### Scatter Plot
+
+A scatter plot is a two-dimensional data visualization that uses dots to represent the values obtained for two different variables. These dots are plotted along the x-axis and y-axis. We use scatter plots when we want to reveal an association between two variables. This association is called a correlation (Chartio, 2019). Please note the starting points of the scale because it does not start a (0,0).
+
+
+#### Scatter Plot
+
+It is difficult to make any sense of this scatter plot because all the points are the same colour of Black. I will add colour to think in the next section. 
+```python
+    # Scatter Plot with x and y axis defined and size of output window
+    data.plot(kind="scatter", x="Sepal Length", y="Sepal Width" figsize=(10,7))
+    plt.show()  # Show graph
+```
+
+#### Scatter Plot With Colour
+
+ Note the large grouping of of Setosa away from the other two flowers. We can linearly speerate this frlower from the other two. Trying to seperate Versicolor from Virginica will prove difficult as they overlap much more.
+
+```python
+    # Scatter Plot with x and y axis defined with color
+    sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
+    # Colour(hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
+    sns.FacetGrid(data, hue="Species", size=7) \
+    .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
+    .add_legend()  # Add a legend to define what colour belongs to each species
+    plt.show()         # Show graph
+```
+
+<p align="center"><img src="scatter_Plot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+
+#### Scatter Plot Matrix
+
+```python
+    # scatter plot matrix
+    sns.set()    # Use seaborn to add style ie Graph
+    pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
+    plt.show()   # Show graph
+```
 
 
 
 
 
 
-
-
-
+### Evaluate Some Algorithms
 
 
 
@@ -348,6 +398,7 @@ Box plot grouped by species.
 1. Seaborn.pydata.org. (2019). seaborn: statistical data visualization — seaborn 0.9.0 documentation. [online] Available at: https://seaborn.pydata.org/ [Accessed 17 Mar. 2019].
 1. YouTube. (2019). What is Pandas? Why and How to Use Pandas in Python. [online] Available at: https://www.youtube.com/watch?v=dcqPhpY7tWk [Accessed 16 Mar. 2019].
 1. Pandas.pydata.org. (2019). pandas.DataFrame.plot — pandas 0.22.0 documentation. [online] Available at: https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.DataFrame.plot.html [Accessed 17 Mar. 2019].
+1. Chartio. (2019). What is a Scatter Plot and When to Use It. [online] Available at: https://chartio.com/learn/dashboards-and-charts/what-is-a-scatter-plot/ [Accessed 17 Mar. 2019].
 1. Shane Lynn. (2019). The Pandas DataFrame – loading, editing, and viewing data in Python. [online] Available at: https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/?fbclid=IwAR0cYjeoMSFeqsEwwFTkJsT_OI9Pvr_v4ooj59tZpUnqmZvMYJ0PgQMGYmw [Accessed 16 Mar. 2019].
 
 
