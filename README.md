@@ -307,8 +307,12 @@ From the graphs we can see that two of the variables seem to indicate a bell sha
 
 #### Box plot
 
+<<<<<<< HEAD
 The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis and
 offers a much clearer indication of the distribution. 
+=======
+I have used seaborn to generate a box plot. I have used a different background style on this one. The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis.
+>>>>>>> a1b244dfa79b43e3129ae1b36ed4896163a0ba97
 
 ```python
     # Box plot. 
