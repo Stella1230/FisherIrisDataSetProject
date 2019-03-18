@@ -327,6 +327,7 @@ I have used seaborn to generate a box plot. I have used a different background s
 Box plot grouped by species. 
 ```python
     # Box Plot Grouped By Species
+    plt.title("Box Plot Grouped By Species")  # Title of graph
     data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
     plt.show()   # Show graph
 ```
@@ -346,7 +347,8 @@ It is difficult to make any sense of this scatter plot because all the points ar
 ```python
     # Scatter Plot with x and y axis defined and size of output window
     data.plot(kind="scatter", x="Sepal Length", y="Sepal Width" figsize=(10,7))
-    plt.show()  # Show graph
+    plt.title("Scatter Plot")  # Title of graph
+    plt.show()                 # Show graph
 ```
 
 #### Scatter Plot With Colour
@@ -359,11 +361,12 @@ It is difficult to make any sense of this scatter plot because all the points ar
     # Colour(hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
     sns.FacetGrid(data, hue="Species", size=7) \
     .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
-    .add_legend()  # Add a legend to define what colour belongs to each species
+    .add_legend()      # Add a legend to define what colour belongs to each species
+    plt.title("Scatter Plot With Colour")         # Title of graph
     plt.show()         # Show graph
 ```
 
-<p align="center"><img src="scatter_Plot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 #### Scatter Plot Matrix
 
@@ -371,9 +374,11 @@ It is difficult to make any sense of this scatter plot because all the points ar
     # scatter plot matrix
     sns.set()    # Use seaborn to add style ie Graph
     pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
-    plt.show()   # Show graph
+    plt.title("Scatter Plot Matrix")    # Title of graph
+    plt.show()                          # Show graph
 ```
 
+<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
 

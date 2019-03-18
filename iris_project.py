@@ -10,20 +10,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# Load libraries
-import pandas
-from pandas.plotting import scatter_matrix
-import matplotlib.pyplot as plt
-from sklearn import model_selection
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
+
 
 
 #When using the below code to view the data will work but wont have headings See the with open section for the update. 
@@ -52,16 +39,20 @@ print("\n")
 print(data["Species"].count)
 print("\n")
 
+
 # Display the amount of rows and columns in the set
 print(data.shape)
 print("\n")
+
 
 # What are the column names in the set
 print(data.columns)
 print("\n")
 
+
 print(type(data))
 print("\n")
+
 
 # Print the first 10 rows
 print(data.head(10))
@@ -71,6 +62,7 @@ print("\n")
 # Just like the finding rows from the beginning, we can also find rows from the end
 print(data.tail(10))
 '''
+
 
 # Print the unique values of the data set and display the number of rows that belong to each
 data['Species'].unique()
@@ -91,18 +83,26 @@ print(data.mean())
 print(data.std())
 '''
 
+
 # Output n number of random rows from the set
 print(data.sample(5))
 print("\n")
+
 
 # Find if the set has any null values. 
 print(data.isnull())
 print("\n")
 
+
 # Find if the set has any null values that are grouped.
 print(data.isnull().sum())
 print("\n")
 
+
+
+
+
+'''                                 Histagrams                                                   '''
 
 
 # Histagram for Sepal Length
@@ -134,7 +134,6 @@ plt.ylabel("Count")                     # Ylabel
 plt.show()                              # Show graph
 
 
-
 # Histagram for Petal Length
  #plt.grid(True)                # Used sns.set instead to display the grid and set a background color
 sns.set()                       # Use default seaborn on background
@@ -147,7 +146,6 @@ plt.title("Histagram - Petal Length(cm)")# Title of graph
 plt.xlabel("Petal_Length_cm")            # Xlabel 
 plt.ylabel("Count")                     # Ylabel
 plt.show()                              # Show graph
-
 
 
 # Histagram for Petal Width
@@ -170,6 +168,11 @@ plt.grid(True)        # Display a grid
 plt.show()            # Show graph
 
 
+
+
+
+'''                       Box Plots                           '''
+
 # Box plot. 
 plt.figure(figsize = (10, 7)) # Adjust the size of the graph
 sns.set_style("ticks")        # Use seaborn on background
@@ -177,26 +180,23 @@ plt.title("Box Plot")         # Title of graph
 sns.boxplot(data=data)        # Use seaborn to generate a box plot
 plt.show()                    # Show graph
 
+
 # Box Plot Grouped By Species
 data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
 plt.show()   # Show graph
 
 
 
-# Scatter Plots
-
-# scatter plot matrix
-sns.set()    # Use seaborn to add style ie Graph
-pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
-plt.show()   # Show graph
-#Note the diagonal grouping of some pairs of attributes. This suggests a high correlation and a predictable relationship.
 
 
+'''                      Scatter Plots                           '''
 
 # Scatter Plot with x and y axis defined
 sns.set()    # Use seaborn to add style ie Graph
 data.plot(kind="scatter", x="Sepal Length", y="Sepal Width", figsize = (10, 7))
-plt.show()  # Show graph
+plt.title("Scatter Plot")   # Title of graph
+plt.show()                  # Show graph
+
 
 # Scatter Plot with x and y axis defined with color
 sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
@@ -204,4 +204,11 @@ sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
 sns.FacetGrid(data, hue="Species", size=7) \
     .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
     .add_legend()  # Add a legend to define what colour belongs to each species
-plt.show()         # Show graph
+plt.title("Scatter Plot With Colour")   # Title of graph
+plt.show()                              # Show graph
+
+
+# scatter plot matrix
+sns.set()    # Use seaborn to add style ie Graph
+pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
+plt.show()   # Show graph
