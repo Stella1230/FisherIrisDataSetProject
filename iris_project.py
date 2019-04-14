@@ -1,8 +1,10 @@
 # Load the Pandas Libraries with the alias of pd
 import pandas as pd
-from pandas.tools.plotting import scatter_matrix
+from pandas import DataFrame
 # Load the NumPy Libraries with the alias of np
 import numpy as np
+from numpy import array
+
 from sklearn import tree
 
 # statistical data visualization 
@@ -210,6 +212,8 @@ plt.show()                              # Show graph
 
 
 # scatter plot matrix
-sns.set()    # Use seaborn to add style ie Graph
-pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
+
+sns.set(style="ticks")    # Use seaborn to add style ie Graph
+sns.pairplot(data, hue="Species", size =2) # Create Matrix from the data sat set window output size
 plt.show()   # Show graph
+
