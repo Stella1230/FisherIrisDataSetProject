@@ -25,7 +25,7 @@ print(f)
 '''
 
 # Open the CSV file and call is ds. We also will add headings to each column and print the results. 
-with open ("iris_data_set.csv") as ds: #
+with open ("iris_data_set.csv") as ds: 
     cols = ["Sepal Length", "Sepal Width" , "Petal Length", "Petal Width", "Species"]
     data = pd.read_csv(ds, names=cols)
 print(data)

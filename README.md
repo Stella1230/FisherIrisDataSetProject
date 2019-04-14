@@ -145,7 +145,7 @@ Here I will group the different flowers by species and output the visual represe
 ```
 ### Statistical Summary. 
 
-I have found two ways to find a summary of each attribute. The describe method it better as it is easier for viewing purposes. Both methods are below. 
+I have found two ways to find a summary of each attribute both methods are shown below. The python "describe" method is a better option as it is easier to code and is a good viewing option that will display the median, mean, min, max, standard deviations etc. It is a good idea to to create this as it is easy to view and can indicate any unexpected or surprising distributions in the dataset. 
 
 ```python
     # Describe the data (count, mean etc)
@@ -203,10 +203,9 @@ In this section I will display visual representation. Just to note that we shoul
 
 ### Histogram
 
-The histogram is very useful when we want to explore our data and give us an understanding of the distribution of the data set. We can set the bin size
-and by default this is set to 10. It is a good idea to change the bin size as it will output the graph in different ways and might potentially display something hidden.
-I have used bin=20 and implemented the use of seaborn on the graph too. Seaborn uses the distplot function to create histograms. One thing to note, when creating the 
-histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
+The histogram is very useful when we want to explore our data and give us an understanding of the distribution of the data set. We can set the bin size (by default this is set to 10). It is a good idea to change the bin size as it will output the graph in different ways and might potentially display something that is hidden. 
+
+I have used bin=20 and implemented the histogram using seaborn. Seaborn uses the distplot function to create histograms. One thing to note, when creating the histograms I used seaborn to set the style with a background grid set to dark and auto set others. This works but has spaces between in the graph. To eliminate this using matplotlib.pyplot (ptl.grid(True)) can be used and no spaces will be displayed. I have kept the seaborn approach but have both options in the code below.
 
 From the graphs we can see that two of the variables seem to indicate a bell shaped curve or Normal distribution. It is possible to write algorithms to exploit this.
 
@@ -307,9 +306,17 @@ From the graphs we can see that two of the variables seem to indicate a bell sha
 
 #### Box plot
 
-The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis and
-offers a much clearer indication of the distribution. 
+The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis and offers a much clearer indication of the distribution. 
+
 I have used seaborn to generate a box plot. I have used a different background style on this one. The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis.
+
+*How to analise the box plot*
+
+Median        : The median is a common measure of the center of your data.
+First Quartile: The middle point of the data between the smallest number and the median.
+Third Quartile: The middle point of the data between the highest number and the median.
+
+
 
 ```python
     # Box plot. 
@@ -353,12 +360,14 @@ It is difficult to make any sense of this scatter plot because all the points ar
 
 #### Scatter Plot With Colour
 
- Note the large grouping of of Setosa away from the other two flowers. We can linearly speerate this frlower from the other two. Trying to seperate Versicolor from Virginica will prove difficult as they overlap much more.
+ The scatter plot can help us visually see relationships between the different inputs from the CSV file. 
+ Note the large grouping of of Setosa away from the other two flowers. We can linearly separate this flower from the other two. Trying to separate Versicolor from Virginica will prove difficult as they overlap too much.
 
 ```python
     # Scatter Plot with x and y axis defined with color
     sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
-    # Colour(hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
+
+    # Colour (hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
     sns.FacetGrid(data, hue="Species", size=7) \
     .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
     .add_legend()      # Add a legend to define what colour belongs to each species
@@ -378,7 +387,7 @@ It is difficult to make any sense of this scatter plot because all the points ar
     plt.show()                          # Show graph
 ```
 
-<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+###########<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
 
