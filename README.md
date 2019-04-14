@@ -384,19 +384,64 @@ It is difficult to make any sense of this scatter plot because all the points ar
 
 ```python
     # scatter plot matrix
-    sns.set()    # Use seaborn to add style ie Graph
-    pd.plotting.scatter_matrix(data,figsize=(10,7)) # Create Matrix from the data sat set window output size
-    plt.title("Scatter Plot Matrix")    # Title of graph
-    plt.show()                          # Show graph
+    sns.set(style="ticks")    # Use seaborn to add style ie Graph
+    sns.pairplot(data, hue="Species", size =2) # Plot data elements in different colour 
+    plt.show()   # Show graph
 ```
 
 <p align="center"><img src="scatterPlotMatrix.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
-
-
-
 ### Evaluate Some Algorithms
+
+#### Training and Testing Data ####
+
+To train and test the data I will have to split the data into two separate parts, the first will be 25% that will be the test set and the other will be 75% and this will be the training set. 
+
+
+The *random_state = 0* is used to initialise a random number generator. This will then split the data into train and test indices.
+
+```python
+    ## Below code will Split the training and test sets into X, x, Y, y 
+    X_train, X_test, y_train, y_test = train_test_split(iris_dataset['data'], 
+                                                        iris_dataset['target'], 
+                                                        random_state=0)
+```
+
+##### Building : k-Nearest Neighbours #####
+
+When we use a scikitlearn training module they are all implemented in the Estimator classes. When the algorithm has extracted the required information from the training data it will be stored in the knn object.
+
+n_neighbors specifies the number of neighbor points to be considered.
+
+```python
+        ## Create the KNN instance
+        knn = KNeighborsClassifier(n_neighbors=1)
+   
+        ## Fit model to training set
+        knn.fit(X_train, y_train)
+```
+
+##### Making Predictions #####
+
+```python
+        # Make predictions
+        X_new = np.array([[5, 2.9, 1, 0.2]])
+        prediction = knn.predict(X_new)
+        print(iris_dataset['target_names'][prediction])
+```
+
+##### Evaluating the Model #####
+
+Calculate the mean accuracy of the model on the test set:
+
+
+## Measure model performance on the test set
+
+```python
+        print(knn.score(X_test, y_test))
+```
+
 
 
 

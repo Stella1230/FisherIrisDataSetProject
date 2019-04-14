@@ -1,16 +1,20 @@
 # Load the Pandas Libraries with the alias of pd
 import pandas as pd
 from pandas import DataFrame
+
 # Load the NumPy Libraries with the alias of np
 import numpy as np
 from numpy import array
 
 from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.externals import joblib
 
 # statistical data visualization 
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 
 
 
@@ -214,6 +218,51 @@ plt.show()                              # Show graph
 # scatter plot matrix
 
 sns.set(style="ticks")    # Use seaborn to add style ie Graph
-sns.pairplot(data, hue="Species", size =2) # Create Matrix from the data sat set window output size
+sns.pairplot(data, hue="Species", size =2) # Plot data elements in different colour 
 plt.show()   # Show graph
 
+
+
+
+
+
+from sklearn.datasets import load_iris 
+iris_dataset = load_iris()
+
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+
+y = data.Species
+X = data.drop('Species',axis=1)
+  
+from sklearn.model_selection import train_test_split
+  
+## Below code will Split the training and test sets into X, x, Y, y 
+X_train, X_test, y_train, y_test = train_test_split(iris_dataset['data'], 
+                                                    iris_dataset['target'], 
+                                                    random_state=0)
+                                                       
+
+
+
+## Create the KNN instance
+knn = KNeighborsClassifier(n_neighbors=1)
+
+## Fit model to training set
+knn.fit(X_train, y_train)
+
+
+# Make predictions
+X_new = np.array([[5, 2.9, 1, 0.2]])
+  
+prediction = knn.predict(X_new)
+  
+print(iris_dataset['target_names'][prediction])
+
+
+
+  
+## Measure model performance on the test set
+print(knn.score(X_test, y_test))
