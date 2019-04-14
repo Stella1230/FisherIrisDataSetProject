@@ -390,7 +390,7 @@ It is difficult to make any sense of this scatter plot because all the points ar
     plt.show()                          # Show graph
 ```
 
-###########<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+<p align="center"><img src="scatterPlotMatrix.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
 

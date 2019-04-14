@@ -183,6 +183,7 @@ plt.show()                    # Show graph
 
 # Box Plot Grouped By Species
 data.boxplot(by='Species',figsize=(10,7)) # GroupBy Species and set window size
+plt.title("Box Plot - Grouped By Species")         # Title of graph
 plt.show()   # Show graph
 
 
