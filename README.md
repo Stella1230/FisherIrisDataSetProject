@@ -441,7 +441,7 @@ We can make a production by inputting values using a numpy array for an unknown 
 
 ##### Evaluating the Model #####
 
-Once the below print statement was run it returned an accuracy of 97 when k=3
+Once the below print statement was run it returned an accuracy of 97 when k=1
 
 ```python
         print(knn.score(X_test, y_test))
