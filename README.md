@@ -430,7 +430,7 @@ knn.fit takes in the feature matrix named X_train and the response vector named 
 
 ##### Making Predictions #####
 
-We can make a production by inputting values using a numpy array for an unknown iris. Then the model will predict the species based on what was learned in the previous steps.  
+We can make a production by inputting values using a numpy array for an unknown iris. Then the model will predict the species based on what was learned in the previous steps. The below python code has only one observation currently. We can have multiple observations in the array.  
 
 ```python
         # Make predictions
@@ -458,6 +458,7 @@ In the grapy below we can see that the accuracy start to drop when k is larger t
 
 1. Medium. (2019). Basic Analysis of the Iris Data set Using Python. [online] Available at: https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342 [Accessed 16 Mar. 2019].
 1. DataFrame, H., Protopopov, A. and Joshi, B. (2019). How to add header row to a pandas DataFrame. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe [Accessed 16 Mar. 2019].
+1. Brownlee, J. (2019) Your First Machine Learning Project in Python Step-By-Step, Machine Learning Mastery. Available at: https://machinelearningmastery.com/machine-learning-in-python-step-by-step/ (Accessed: 14 April 2019).
 1. Holtz, Y. (2019). #104 Seaborn Themes. [online] The Python Graph Gallery. Available at: https://python-graph-gallery.com/104-seaborn-themes/ [Accessed 17 Mar. 2019].
 1. Kaggle.com. (2019). Iris Data Analysis and Machine Learning(Python) | Kaggle. [online] Available at: https://www.kaggle.com/gopaltirupur/iris-data-analysis-and-machine-learning-python [Accessed 16 Mar. 2019].
 1. Kaggle.com. (2019). Iris Flower Dataset. [online] Available at: https://www.kaggle.com/arshid/iris-flower-dataset [Accessed 16 Mar. 2019].
@@ -468,9 +469,11 @@ In the grapy below we can see that the accuracy start to drop when k is larger t
 1. Archive.ics.uci.edu. (2019). UCI Machine Learning Repository: Iris Data Set. [online] Available at: https://archive.ics.uci.edu/ml/datasets/iris [Accessed 16 Mar. 2019].
 1. YouTube. (2019). What is Numpy? Python for Data Science tutorial. [online] Available at: https://www.youtube.com/watch?v=pP5dQG0foTs [Accessed 16 Mar. 2019].
 1. Seaborn.pydata.org. (2019). seaborn: statistical data visualization — seaborn 0.9.0 documentation. [online] Available at: https://seaborn.pydata.org/ [Accessed 17 Mar. 2019].
+1. Matplotlib: Python plotting — Matplotlib 3.0.3 documentation (2019) Matplotlib.org. Available at: https://matplotlib.org/ (Accessed: 14 April 2019).
 1. YouTube. (2019). What is Pandas? Why and How to Use Pandas in Python. [online] Available at: https://www.youtube.com/watch?v=dcqPhpY7tWk [Accessed 16 Mar. 2019].
 1. Pandas.pydata.org. (2019). pandas.DataFrame.plot — pandas 0.22.0 documentation. [online] Available at: https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.DataFrame.plot.html [Accessed 17 Mar. 2019].
 1. Chartio. (2019). What is a Scatter Plot and When to Use It. [online] Available at: https://chartio.com/learn/dashboards-and-charts/what-is-a-scatter-plot/ [Accessed 17 Mar. 2019].
 1. Shane Lynn. (2019). The Pandas DataFrame – loading, editing, and viewing data in Python. [online] Available at: https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/?fbclid=IwAR0cYjeoMSFeqsEwwFTkJsT_OI9Pvr_v4ooj59tZpUnqmZvMYJ0PgQMGYmw [Accessed 16 Mar. 2019].
+1. scikit-learn video #4: Model training and prediction with K-nearest neighbors (2019) No Free Hunch. Available at: http://blog.kaggle.com/2015/04/30/scikit-learn-video-4-model-training-and-prediction-with-k-nearest-neighbors/ (Accessed: 14 April 2019).
 
 
