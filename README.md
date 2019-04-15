@@ -392,11 +392,13 @@ It is difficult to make any sense of this scatter plot because all the points ar
 <p align="center"><img src="scatterPlotMatrix.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
-### Evaluate Some Algorithms
+### Evaluate An Algorithms
 
 #### Training and Testing Data ####
 
-To train and test the data I will have to split the data into two separate parts, the first will be 25% that will be the test set and the other will be 75% and this will be the training set. 
+In this section I will implement the the k-Nearest Neighbors algorithm. This algorithm is easy to understand and implement.
+
+Will the reference a website I found I will train and test the data. I will have to split the data into two separate parts, the first will be 25% that will be the test set and the other will be 75% and this will be the training set. (A Complete Guide to K-Nearest-Neighbors with Applications in Python and R, 2019)
 
 
 The *random_state = 0* is used to initialise a random number generator. This will then split the data into train and test indices.
@@ -410,9 +412,13 @@ The *random_state = 0* is used to initialise a random number generator. This wil
 
 ##### Building : k-Nearest Neighbours #####
 
-When we use a scikitlearn training module they are all implemented in the Estimator classes. When the algorithm has extracted the required information from the training data it will be stored in the knn object.
+The k-Nearest neighbours algorithm is used for regression and classification problems. It is a powerful tool to use when little or no knowledge is know about the distribution of data. According to (scikit-learn video #4: Model training and prediction with K-nearest neighbors, 2019) *"KNN can predict the response class for a future observation by calculating the "distance" to all training observations and assuming that the response class of nearby observations is likely to be similar."*
 
-n_neighbors specifies the number of neighbor points to be considered.
+When we use a scikitlearn training module they are all implemented in the estimator classes. When the algorithm has extracted the required information from the training data it will be stored in the knn object.
+
+n_neighbors specifies the number of neighbor points to be considered. Knn is called a lazy learner because it does not really get trained but will take all of the data with it as it tests each attribute.
+
+knn.fit takes in the feature matrix named X_train and the response vector named y_train.
 
 ```python
         ## Create the KNN instance
@@ -424,6 +430,8 @@ n_neighbors specifies the number of neighbor points to be considered.
 
 ##### Making Predictions #####
 
+We can make a production by inputting values using a numpy array for an unknown iris. Then the model will predict the species based on what was learned in the previous steps.  
+
 ```python
         # Make predictions
         X_new = np.array([[5, 2.9, 1, 0.2]])
@@ -433,14 +441,15 @@ n_neighbors specifies the number of neighbor points to be considered.
 
 ##### Evaluating the Model #####
 
-Calculate the mean accuracy of the model on the test set:
-
-
-## Measure model performance on the test set
+Once the below print statement was run it returned an accuracy of 97 when k=3
 
 ```python
         print(knn.score(X_test, y_test))
 ```
+
+In the grapy below we can see that the accuracy start to drop when k is larger than 60. 
+
+<p align="center"><img src="X_train.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
 

@@ -6,17 +6,21 @@ from pandas import DataFrame
 import numpy as np
 from numpy import array
 
+# Load sklearn 
 from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.externals import joblib
+from sklearn.datasets import load_iris 
+iris_dataset = load_iris()
+from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import train_test_split
 
 # statistical data visualization 
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-
 
 
 #When using the below code to view the data will work but wont have headings See the with open section for the update. 
@@ -30,15 +34,13 @@ f.columns = ['sepal_length', 'sepal_width' , 'petal_length', 'petal_width', 'spe
 print(f)
 '''
 
+
 # Open the CSV file and call is ds. We also will add headings to each column and print the results. 
 with open ("iris_data_set.csv") as ds: 
     cols = ["Sepal Length", "Sepal Width" , "Petal Length", "Petal Width", "Species"]
     data = pd.read_csv(ds, names=cols)
 print(data)
 print("\n")
-
-
-
 
 
 # Print the number of rows in the dataset.
@@ -64,6 +66,7 @@ print("\n")
 print(data.head(10))
 print("\n")
 
+
 '''
 # Just like the finding rows from the beginning, we can also find rows from the end
 print(data.tail(10))
@@ -79,6 +82,7 @@ print("\n")
 # Summary of each attribute
 print(data.describe())
 print("\n")
+
 
 # Below commented out code does the same as the above describe command but is not visually a good option for all of them together.
 '''
@@ -106,11 +110,7 @@ print("\n")
 
 
 
-
-
 '''                                 Histagrams                                                   '''
-
-
 # Histagram for Sepal Length
  #plt.grid(True)               # Used sns.set instead to display the grid and set a background color
 sns.set_style("darkgrid")      # Use seaborn on background
@@ -175,10 +175,7 @@ plt.show()            # Show graph
 
 
 
-
-
 '''                       Box Plots                           '''
-
 # Box plot. 
 plt.figure(figsize = (10, 7)) # Adjust the size of the graph
 sns.set_style("ticks")        # Use seaborn on background
@@ -194,10 +191,7 @@ plt.show()   # Show graph
 
 
 
-
-
 '''                      Scatter Plots                           '''
-
 # Scatter Plot with x and y axis defined
 sns.set()    # Use seaborn to add style ie Graph
 data.plot(kind="scatter", x="Sepal Length", y="Sepal Width", figsize = (10, 7))
@@ -224,45 +218,50 @@ plt.show()   # Show graph
 
 
 
-
-
-from sklearn.datasets import load_iris 
-iris_dataset = load_iris()
-
-
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+'''                             K Algorithm                           '''
 
 y = data.Species
 X = data.drop('Species',axis=1)
   
-from sklearn.model_selection import train_test_split
   
 ## Below code will Split the training and test sets into X, x, Y, y 
 X_train, X_test, y_train, y_test = train_test_split(iris_dataset['data'], 
                                                     iris_dataset['target'], 
                                                     random_state=0)
                                                        
-
-
-
 ## Create the KNN instance
 knn = KNeighborsClassifier(n_neighbors=1)
 
-## Fit model to training set
+
+## Fit model with data
 knn.fit(X_train, y_train)
 
 
-# Make predictions
-X_new = np.array([[5, 2.9, 1, 0.2]])
-  
+# Predict the responce
+X_new = np.array([[3, 5, 4, 2]])
 prediction = knn.predict(X_new)
-  
 print(iris_dataset['target_names'][prediction])
 
 
-
-  
 ## Measure model performance on the test set
 print(knn.score(X_test, y_test))
+
+
+#accuracy values is array
+accuracy_values=[]
+
+for x in range(1,X_train.shape[0]):
+	clf=KNeighborsClassifier(n_neighbors=x).fit(X_train,y_train)
+	accuracy=accuracy_score(y_test,clf.predict(X_test))
+	accuracy_values.append([x,accuracy])
+	pass
+
+
+#converting normal python array to numpy array
+
+accuracy_values=np.array(accuracy_values)
+
+plt.plot(accuracy_values[:,0],accuracy_values[:,1])
+plt.xlabel("K")
+plt.ylabel("accuracy")
+plt.show()
