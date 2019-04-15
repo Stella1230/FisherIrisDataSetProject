@@ -305,6 +305,56 @@ From the graphs we can see that two of the variables seem to indicate a bell sha
 
 <br>
 
+
+### Scatter Plot
+
+A scatter plot is a two-dimensional data visualization that uses dots to represent the values obtained for two different variables. These dots are plotted along the x-axis and y-axis. We use scatter plots when we want to reveal an association between two variables. This association is called a correlation (Chartio, 2019). Please note the starting points of the scale because it does not start a (0,0).
+
+
+#### Scatter Plot
+
+It is difficult to make any sense of this scatter plot because all the points are the same colour of Black. I will add colour to think in the next section. 
+```python
+    # Scatter Plot with x and y axis defined and size of output window
+    data.plot(kind="scatter", x="Sepal Length", y="Sepal Width" figsize=(10,7))
+    plt.title("Scatter Plot")  # Title of graph
+    plt.show()                 # Show graph
+```
+
+#### Scatter Plot With Colour
+
+ The scatter plot can help us visually see relationships between the different inputs from the CSV file. 
+ Note the large grouping of of Setosa away from the other two flowers. We can linearly separate this flower from the other two. Trying to separate Versicolor from Virginica will prove difficult as they overlap too much. 
+ 
+ Note that the sentana flower has a significant outlier. 
+
+```python
+    # Scatter Plot with x and y axis defined with color
+    sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
+
+    # Colour (hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
+    sns.FacetGrid(data, hue="Species", size=7) \
+    .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
+    .add_legend()      # Add a legend to define what colour belongs to each species
+    plt.title("Scatter Plot With Colour")         # Title of graph
+    plt.show()         # Show graph
+```
+
+<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+
+#### Scatter Plot Matrix
+
+```python
+    # scatter plot matrix
+    sns.set(style="ticks")    # Use seaborn to add style ie Graph
+    sns.pairplot(data, hue="Species", size =2) # Plot data elements in different colour 
+    plt.show()   # Show graph
+```
+
+<p align="center"><img src="scatterPlotMatrix.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
+
+
+
 ### Box Plots
 
 #### Box plot
@@ -346,50 +396,6 @@ Box plot grouped by species.
 
 <br>
 
-### Scatter Plot
-
-A scatter plot is a two-dimensional data visualization that uses dots to represent the values obtained for two different variables. These dots are plotted along the x-axis and y-axis. We use scatter plots when we want to reveal an association between two variables. This association is called a correlation (Chartio, 2019). Please note the starting points of the scale because it does not start a (0,0).
-
-
-#### Scatter Plot
-
-It is difficult to make any sense of this scatter plot because all the points are the same colour of Black. I will add colour to think in the next section. 
-```python
-    # Scatter Plot with x and y axis defined and size of output window
-    data.plot(kind="scatter", x="Sepal Length", y="Sepal Width" figsize=(10,7))
-    plt.title("Scatter Plot")  # Title of graph
-    plt.show()                 # Show graph
-```
-
-#### Scatter Plot With Colour
-
- The scatter plot can help us visually see relationships between the different inputs from the CSV file. 
- Note the large grouping of of Setosa away from the other two flowers. We can linearly separate this flower from the other two. Trying to separate Versicolor from Virginica will prove difficult as they overlap too much.
-
-```python
-    # Scatter Plot with x and y axis defined with color
-    sns.set_style("whitegrid")    # Use seaborn to add whitegrid background
-
-    # Colour (hue) by Species, plot scatter plot on sepal length(X-Axis) and width(Y-Axix)
-    sns.FacetGrid(data, hue="Species", size=7) \
-    .map(plt.scatter, "Sepal Length", "Sepal Width" ) \
-    .add_legend()      # Add a legend to define what colour belongs to each species
-    plt.title("Scatter Plot With Colour")         # Title of graph
-    plt.show()         # Show graph
-```
-
-<p align="center"><img src="scatterPlot.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
-
-#### Scatter Plot Matrix
-
-```python
-    # scatter plot matrix
-    sns.set(style="ticks")    # Use seaborn to add style ie Graph
-    sns.pairplot(data, hue="Species", size =2) # Plot data elements in different colour 
-    plt.show()   # Show graph
-```
-
-<p align="center"><img src="scatterPlotMatrix.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
 ### Evaluate An Algorithms
@@ -398,8 +404,7 @@ It is difficult to make any sense of this scatter plot because all the points ar
 
 In this section I will implement the the k-Nearest Neighbors algorithm. This algorithm is easy to understand and implement.
 
-Will the reference a website I found I will train and test the data. I will have to split the data into two separate parts, the first will be 25% that will be the test set and the other will be 75% and this will be the training set. (A Complete Guide to K-Nearest-Neighbors with Applications in Python and R, 2019)
-
+Will the reference a website I found I will train and test the data. I will have to split the data into two separate parts, the first will be 25% that will be the test set and the other will be 75% and this will be the training set. (A Complete Guide to K-Nearest-Neighbors with Applications in Python and R, 2019) The training set is the data that can be seen and can be used by us to build models and train. We use the training set to help us gain more knowledge about the dataset and determine the model parameters. The training set is the data that is unseen and we can a model based on new data that we have. 
 
 The *random_state = 0* is used to initialise a random number generator. This will then split the data into train and test indices.
 
