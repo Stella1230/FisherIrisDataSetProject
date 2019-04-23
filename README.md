@@ -457,6 +457,21 @@ In the grapy below we can see that the accuracy start to drop when k is larger t
 <p align="center"><img src="X_train.png" alt="Scatter Plot" title ="ScatterPlot" height="400" width="600"></p>
 
 
+### Conclusion
+
+Fisher's iris data set is a classic and is possibly one of the most famous datasets to be found and used today. It offers great opportunity to explore and visually see how we can extract information depending on our required result. The dataset comntains 150 instances that are evenly spead over 3 classes which are are related to the the flower. From our findings we can see that the Setosa is lineraly seperable from the other 2 types for flowes and we can see that the Setosa has an outlier. 
+
+Sumerising the dataset has allowed us to view different aspects of the dastaset, we can see if the data set had the corrrect number of inputs (150), the shape of the data, name of each row, class distribution, null rows etc.
+
+The statistical summary is a great feature that we can use to view numeric information about the dataset that includes, minimum and maximum count, mean, standard deviation and the quantiles (25%, 50% and 75%). This allows us to visually see how the data is structured or might be realted in some way. 
+
+The histograms allow us to view the data and search for any noticable patterns or frequency distributions. From the graphs created we can see that two of the variables seem to indicate a bell shaped curve or Normal distribution that means that it is possible to write algorithms to exploit this.
+
+A scatter plot is a two-dimensional data visualization that uses dots to represent the values obtained for two different variables and helps us to visually see that the petal width and length are the dominant feature in this data set. The graph is percentile bases and is divided into four equal sections. This is a great method to find the deviation, mean, and median in statistical analysis and offers a much clearer indication of the distribution.
+
+I have also used the k-Nearest neighbours algorithm that is used for regression and classification problems. This is a powerful tool to use when little or no knowledge is know about the distribution of data. This algorithm does not require any training to make its perdictions and new data can be added easily. I would not use this algorithm on a large data set that has alot of dimensions as it will be difficult to caluclate the distance
+
+
 
 
 # Biobliography
